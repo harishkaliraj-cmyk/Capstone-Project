@@ -181,21 +181,13 @@ svm_scores.mean()
 # In[18]:
 
 
-forest_clf = RandomForestClassifier(n_estimators=100, random_state=42)
-forest_scores = cross_val_score(forest_clf, X_train, y_train, cv=10)
-forest_scores.mean()
-
-
-# In[19]:
-
-
 y_test_pred = svm_clf.predict(X_test)
 accuracy = accuracy_score(y_pred, y_test_pred)
 
 print(accuracy)
 
 
-# In[20]:
+# In[19]:
 
 
 prediction_df = pd.DataFrame({
@@ -204,19 +196,19 @@ prediction_df = pd.DataFrame({
 })
 
 
-# In[21]:
+# In[20]:
 
 
 print(prediction_df)
 
 
-# In[22]:
+# In[21]:
 
 
 prediction_df.head()
 
 
-# In[ ]:
+
 
 
 
